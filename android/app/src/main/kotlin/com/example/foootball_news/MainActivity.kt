@@ -1,0 +1,5 @@
+package com.example.foootball_news
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
