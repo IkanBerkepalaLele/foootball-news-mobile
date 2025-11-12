@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foootball_news/screens/menu.dart';
 import 'package:foootball_news/screens/newslist_form.dart';
+import 'package:foootball_news/screens/news_entry_list.dart';
+
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -9,7 +11,7 @@ class LeftDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        children: [
+        children: [ 
           const DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.blue,
@@ -73,6 +75,17 @@ class LeftDrawer extends StatelessWidget {
                   ));
             },
           ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('News List'),
+            onTap: () {
+                // Route to news list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const NewsEntryListPage()),
+                );
+            },
+        ),
         ],
       ),
     );
